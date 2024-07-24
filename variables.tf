@@ -34,6 +34,7 @@ variable "sns-protocol" {
 }
 
 variable "sns-topic-name" {
+  default     = "budget-notifications"
   description = "The sns topic name"
   type        = string
 }
@@ -46,6 +47,7 @@ variable "sns-endpoint" {
 variable "sns-po-endpoint" {
   description = "The sns endpoint for PO"
   type        = string
+  default     = ""
 }
 
 variable "project-name" {
@@ -54,7 +56,7 @@ variable "project-name" {
 }
 
 variable "aws-region" {
-  description = "The AWS region"
+  description = "The AWS region where resources will be deployed"
   type        = string
 }
 

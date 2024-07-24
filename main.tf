@@ -141,6 +141,7 @@ resource "aws_sns_topic_subscription" "email_subscription" {
 }
 
 resource "aws_sns_topic_subscription" "email_PO_subscription" {
+  count                  = var.sns-po-endpoint != "" ? 1 : 0
   topic_arn              = aws_sns_topic.budget_notifications.arn
   protocol               = var.sns-protocol
   endpoint               = var.sns-po-endpoint
