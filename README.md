@@ -12,7 +12,6 @@ module "cost_notifier" {
   calculation-type = "monthly" //   # daily, weekly, monthly are the options
   cron-expression  = "cron(0 7 ? * MON *)" // 9:00AM every Monday
   aws-region       = "eu-central-1"
-  sns-topic-name   = "budget-notifications"
   sns-endpoint     = "email-me@gmail.com"
   sns-po-endpoint  = "email-po@gmail.com" // both emails will receive the notification
 }
